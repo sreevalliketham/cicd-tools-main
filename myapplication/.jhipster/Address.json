@@ -1,0 +1,41 @@
+{
+  "annotations": {
+    "changelogDate": "20240508133101"
+  },
+  "clientRootFolder": "myapplication",
+  "databaseType": "sql",
+  "dto": "no",
+  "entityTableName": "address",
+  "fields": [
+    {
+      "fieldName": "aid",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "street",
+      "fieldType": "String",
+      "fieldValidateRules": []
+    },
+    {
+      "fieldName": "citi",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "myapplication",
+  "name": "Address",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "id",
+      "otherEntityName": "address",
+      "otherEntityRelationshipName": "address",
+      "relationshipName": "onetoone",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}
