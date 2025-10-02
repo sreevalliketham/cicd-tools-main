@@ -4,7 +4,7 @@ resource "aws_instance" "jenkins" {
   instance_type = "t3.small"
   vpc_security_group_ids = [aws_security_group.main.id]
   subnet_id = "subnet-0bff41d0dc9c827a1" #replace your Subnet
-  
+ 
   # need more for terraform
   root_block_device {
     volume_size = 50
@@ -42,7 +42,8 @@ resource "aws_instance" "jenkins_agent" {
 resource "aws_security_group" "main" {
   name        =  "${var.project}-${var.environment}-jenkins"
   description = "Created to attatch Jenkins and its agents"
-
+  vpc_id="vpc-0679121296d53dcb5"
+  
   egress {
     from_port        = 0
     to_port          = 0
